@@ -1,9 +1,30 @@
-<mxfile host="app.diagrams.net" modified="2023-12-31T02:01:48.255Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="22.1.16" etag="Ve47gbalDPQEx43DCIJz" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-31T08:00:37.722Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="LcX2dRtJw2HBDhp52GQe" version="22.1.16" type="github">
   <diagram name="第 1 页" id="WNboK9QrO_0ZUFDV926i">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="565" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="D2g6i2C4goOOFMNhzeLC-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="D2g6i2C4goOOFMNhzeLC-19" target="D2g6i2C4goOOFMNhzeLC-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D2g6i2C4goOOFMNhzeLC-19" value="sys_sleep()&lt;br&gt;获得自旋锁tickslock" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D2g6i2C4goOOFMNhzeLC-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="D2g6i2C4goOOFMNhzeLC-20" target="D2g6i2C4goOOFMNhzeLC-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D2g6i2C4goOOFMNhzeLC-20" value="&lt;b&gt;产生中断：定时器&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D2g6i2C4goOOFMNhzeLC-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="D2g6i2C4goOOFMNhzeLC-22" target="D2g6i2C4goOOFMNhzeLC-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D2g6i2C4goOOFMNhzeLC-22" value="中断处理：&lt;br&gt;&lt;div style=&quot;color: rgb(56, 58, 66); background-color: rgb(250, 250, 250); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; line-height: 16px;&quot;&gt;devintr()-&amp;gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(56, 58, 66); background-color: rgb(250, 250, 250); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; line-height: 16px;&quot;&gt;clockintr()-&amp;gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(56, 58, 66); background-color: rgb(250, 250, 250); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; line-height: 16px;&quot;&gt;尝试获得tickslock&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="120" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="D2g6i2C4goOOFMNhzeLC-24" value="sys_sleep()未释放tickslock，导致死锁" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="465" width="120" height="65" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
